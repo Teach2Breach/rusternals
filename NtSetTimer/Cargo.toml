@@ -1,0 +1,28 @@
+[package]
+name = "NtSetTimer"
+version = "0.1.0"
+edition = "2024"
+# author = "Teach2Breach"
+
+[lib]
+path = "src/lib.rs"
+crate-type = ["staticlib", "cdylib"]
+
+[dependencies]
+windows = { version = "0.52", features = [
+    "Win32_System_Threading",
+    "Win32_Foundation",
+    "Win32_System_WindowsProgramming",
+    "Win32_System_Kernel",
+    "Win32_Security",
+    "Win32_System_SystemInformation",
+    "Win32_System_LibraryLoader"
+] }
+litcrypt = "0.3.0"
+
+[profile.release]
+strip = true  # Automatically strip symbols from the binary.
+opt-level = "z"  # Optimize for size.
+lto = true
+codegen-units = 1
+panic = "abort"
