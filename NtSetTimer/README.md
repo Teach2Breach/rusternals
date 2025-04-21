@@ -35,7 +35,7 @@ let timer_handle = set_timer(
 The example program creates a timer that fires after 2 seconds:
 
 ```bash
-cargo run
+cargo run --bin NtSetTimer
 ```
 
 Expected output:
