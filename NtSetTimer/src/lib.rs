@@ -1,3 +1,7 @@
+#![allow(non_upper_case_globals)]
+#![allow(non_camel_case_types)]
+#![allow(non_snake_case)]
+
 use std::ffi::c_void;
 use std::ptr::null_mut;
 use std::time::Duration;
