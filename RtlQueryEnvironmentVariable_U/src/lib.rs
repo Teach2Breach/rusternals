@@ -50,7 +50,3 @@ pub fn get_environment_variable(name: &str) -> Result<Option<String>> {
         Ok(None)
     }
 }
-
-pub fn get_uuid() -> Result<Option<String>> {
-    get_environment_variable("UUID")
-} 

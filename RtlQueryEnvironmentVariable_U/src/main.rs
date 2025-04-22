@@ -1,4 +1,4 @@
-use RtlQueryEnvironmentVariable_U::{get_environment_variable, get_uuid};
+use RtlQueryEnvironmentVariable_U::get_environment_variable;
 
 fn main() {
     // Test getting a specific environment variable
@@ -8,10 +8,11 @@ fn main() {
         Err(e) => eprintln!("Error getting OneDrive: {}", e),
     }
 
-    // Test getting the UUID
-    match get_uuid() {
-        Ok(Some(uuid)) => println!("UUID: {}", uuid),
-        Ok(None) => println!("UUID not found"),
-        Err(e) => eprintln!("Error getting UUID: {}", e),
+    //check for USERNAME environment variable
+    match get_environment_variable("USERNAME") {
+        Ok(Some(value)) => println!("USERNAME: {}", value),
+        Ok(None) => println!("USERNAME not found"),
+        Err(e) => eprintln!("Error getting USERNAME: {}", e),
     }
+    
 }
