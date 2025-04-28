@@ -17,6 +17,11 @@ Each project demonstrates the usage of a specific Windows Native API function:
    - Documentation: [NtSetTimer](https://undocumented-ntinternals.github.io/UserMode/Undocumented%20Functions/NT%20Objects/Timer/NtSetTimer.html)
    - Function: `NtSetTimer` - Creates or sets a timer object
 
+4. [NtDebugActiveProcess](NtDebugActiveProcess/) - Debug a process using the Windows Native API
+   - Documentation: [NtDebugActiveProcess](http://undocumented.ntinternals.net/UserMode/Undocumented%20Functions/NT%20Objects/DebugObject/NtDebugActiveProcess.html)
+   - Function: `NtDebugActiveProcess` - Attaches a debug object to a process for debugging
+   - Requires: SeDebugPrivilege to be enabled in the calling process token
+
 Each project includes:
 - Example usage
 - Documentation
